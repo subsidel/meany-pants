@@ -1,0 +1,25 @@
+<a class="btn btn-primary" href="/#/create/video"><span class="glyphicon glyphicon-plus"></span> Create Video</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Title</th>
+    <th>URL</th>
+    <th>Operations</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="video in videos">
+      <td><a ng-href="/#/video/{{ video._id }}">{{ video.title }}</a></td>
+      <td>{{ video.url }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/video/{{ video._id }}/edit" class="btn btn-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/video/{{ video._id }}/delete" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
