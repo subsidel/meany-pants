@@ -33,6 +33,6 @@ _.each(routes, function(controller, route) {
 mongoose.connect('mongodb://localhost/meanapp');
 mongoose.connection.once('open', function() {
 
-  console.log('Listening on port 3000...');
-  app.listen(3000, '0.0.0.0');
+  console.log('Listening on port 8080...');
+  app.listen(8080, '0.0.0.0');
 });

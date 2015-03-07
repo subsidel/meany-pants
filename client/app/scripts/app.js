@@ -15,7 +15,7 @@ angular
   ])
   .config(function ($routeProvider, RestangularProvider) {
     var host = window.location.hostname;
-    RestangularProvider.setBaseUrl('http://'+host+':3000');
+    RestangularProvider.setBaseUrl('http://'+host+':8080');
 
     $routeProvider
       .when('/', {
