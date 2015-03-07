@@ -4,13 +4,13 @@
   <thead>
     <tr><th>Title</th>
     <th>URL</th>
-    <th>Operations</th>
+    <th ng-if="isAuthorized(currentUser.role)">Operations</th>
   </tr></thead>
   <tbody>
     <tr ng-repeat="video in videos">
       <td><a ng-href="/#/video/{{ video._id }}">{{ video.title }}</a></td>
       <td>{{ video.url }}</td>
-      <td>
+      <td ng-if="isAuthorized(currentUser.role)">
         <div class="button-group">
           <a ng-href="/#/video/{{ video._id }}/edit" class="btn btn-default">
             <span class="glyphicon glyphicon-edit"></span>

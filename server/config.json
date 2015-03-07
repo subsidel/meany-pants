@@ -1,0 +1,23 @@
+{
+    "port": 8080,
+    "security": {
+        "tokenLife" : 3600
+    },
+    "mongoose": {
+        "uri": "mongodb://localhost/meanapp"
+    },
+    "default": {
+        "api": {
+            "version" : "v1"
+        },
+        "user": {
+            "username": "${user.name}",
+            "password": "${user.password}"
+        },
+        "client": {
+            "name": "${client.name}",
+            "clientId": "${client.id}",
+            "clientSecret": "${client.secret}"
+        }
+    }
+}
